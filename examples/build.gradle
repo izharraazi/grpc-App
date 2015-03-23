@@ -23,27 +23,17 @@ dependencies {
 protobufCodeGenPlugins = ["java_plugin:$javaPluginPath"]
 generateProto.dependsOn ':grpc-compiler:java_pluginExecutable'
 
-task routeGuideServer(type: JavaExec) {
-    main = "io.grpc.examples.routeguide.RouteGuideServer"
-    description = "Executes the route guide server."
+
+
+task pollServer(type: JavaExec) {
+    main = "edu.sjsu.cmpe273.lab2.PollServer"
+    description = "Executes the Poll server."
     classpath = sourceSets.main.runtimeClasspath
 }
 
-task routeGuideClient(type: JavaExec) {
-    main = "io.grpc.examples.routeguide.RouteGuideClient"
-    description = "Executes the route guide client."
-    classpath = sourceSets.main.runtimeClasspath
-}
-
-task helloWorldServer(type: JavaExec) {
-    main = "io.grpc.examples.helloworld.HelloWorldServer"
-    description = "Executes the hello world server."
-    classpath = sourceSets.main.runtimeClasspath
-}
-
-task helloWorldClient(type: JavaExec) {
-    main = "io.grpc.examples.helloworld.HelloWorldClient"
-    description = "Executes the hello world client."
+task pollClient(type: JavaExec) {
+    main = "edu.sjsu.cmpe273.lab2.PollClient"
+    description = "Executes the Poll client."
     classpath = sourceSets.main.runtimeClasspath
 }
 
